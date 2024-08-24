@@ -1,12 +1,16 @@
 import React from 'react'
+import HeroSection from './HeroSection'
+import Navbar from '../Navbar'
+import About from '../About'
+import Property from '../Properties'
 
 export default function Home() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">
-        Hello, Tailwind CSS!
-      </h1>
-      
-      Home</div>
+      <Navbar/>
+      <HeroSection/>
+      <Property/>
+      <About/>
+     </div>
   )
 }
