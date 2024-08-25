@@ -6,9 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#colorcode1',   
-        secondary: '#colorcode2', 
-        accent: '#colorcode3',
+        gold: {
+          500: '#FFD700', 
+          300: '#FFC700', 
+        },
+        blue: {
+          800: '#002366', 
+          600: '#0056b3', 
+        },
       },
       fontFamily: {
         heading: ['Playfair Display', 'serif'],

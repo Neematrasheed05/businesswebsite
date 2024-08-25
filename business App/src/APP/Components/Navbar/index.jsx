@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import Logo from "../../assets/key.png"; // Adjust the path as needed
-
+import Logo from "../../assets/key.png"; 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,7 +11,6 @@ const Navbar = () => {
   return (
     <nav className="absolute top-0 left-0 w-full bg-transparent text-white shadow-none z-50">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
-        {/* Logo Section */}
         <div className="flex items-center space-x-4">
           <a 
             href="#hero" 
