@@ -62,7 +62,6 @@ const Agent = () => {
       <div className="absolute inset-0 -z-10 bg-blue-800 bg-opacity-30"></div>
       <section className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center pb-12">
-          <h2 className="text-base font-bold text-gold-300">We have the best team</h2>
           <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white">
             Meet our amazing team members
           </h1>
