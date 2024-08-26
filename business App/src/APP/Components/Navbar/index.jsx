@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import Logo from "../../assets/key.png"; 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -9,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 left-0 w-full bg-transparent text-white shadow-none z-50">
+    <nav className="sticky top-0 left-0 w-full bg-gold-500 text-blue-900 shadow-md z-50">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <a 
@@ -20,14 +21,13 @@ const Navbar = () => {
             <img 
               src={Logo} 
               alt="HouseHub Logo" 
-              className="h-20 w-20 mr-2" // Adjust the size as needed
+              className="h-20 w-20 mr-2"
             />
-            <span className="text-2xl font-bold hover:text-accent transition duration-300 font-heading">
+            <span className="text-2xl font-bold hover:text-gold-300 transition duration-300 font-heading text-blue-900">
               HouseHub
             </span>
           </a>
         </div>
-        {/* Menu Toggle Button for Mobile */}
         <div className="flex items-center space-x-4 lg:hidden">
           <button 
             onClick={toggleMenu} 
@@ -58,7 +58,8 @@ const Navbar = () => {
               to="hero" 
               smooth={true} 
               duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 hover:text-accent transition duration-300 font-body cursor-pointer text-xl"
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
               onClick={() => setIsOpen(false)}
             >
               Home
@@ -69,7 +70,8 @@ const Navbar = () => {
               to="properties" 
               smooth={true} 
               duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 hover:text-accent transition duration-300 font-body cursor-pointer text-xl"
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
               onClick={() => setIsOpen(false)}
             >
               Properties
@@ -77,13 +79,14 @@ const Navbar = () => {
           </li>
           <li>
             <Link 
-              to="about" 
+              to="agents" 
               smooth={true} 
               duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 hover:text-accent transition duration-300 font-body cursor-pointer text-xl"
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
               onClick={() => setIsOpen(false)}
             >
-              About
+              Our Team
             </Link>
           </li>
           <li>
@@ -91,18 +94,32 @@ const Navbar = () => {
               to="contact" 
               smooth={true} 
               duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 hover:text-accent transition duration-300 font-body cursor-pointer text-xl"
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
               onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
           </li>
+          <li>
+            <Link 
+              to="why-choose-us" 
+              smooth={true} 
+              duration={500} 
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
+              onClick={() => setIsOpen(false)}
+            >
+          Why Choose Us
+            </Link>
+        </li>
+
         </ul>
-        {/* Get Started Button */}
+        
         <div className="hidden lg:block">
           <a 
             href="#contact" 
-            className="bg-secondary hover:bg-accent text-white font-bold py-2 px-4 rounded-full transition duration-300 font-body cursor-pointer text-xl"
+            className="bg-blue-800 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 font-body cursor-pointer text-xl"
           >
             Get Started
           </a>

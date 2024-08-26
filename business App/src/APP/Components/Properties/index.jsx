@@ -96,9 +96,9 @@ const FeaturedListings = () => {
                 <img
                   src={property.image}
                   alt={property.title}
-                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 transform hover:scale-110"
+                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 ease-in-out transform hover:scale-102"
                 />
-                <div className="absolute inset-0 bg-yellow-500/70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6">
+                <div className="absolute inset-0 bg-yellow-500/70 opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out flex items-center justify-center p-6 z-10">
                   <div className="text-center text-blue-800"> 
                     <h4 className="text-2xl font-semibold">{property.title}</h4>
                     <div className="flex justify-center items-center mt-4 space-x-4">
@@ -113,7 +113,7 @@ const FeaturedListings = () => {
                     </div>
                     <div className="mt-4 text-blue-800">
                       <button 
-                        className="flex items-center"
+                        className="flex items-center transition-all duration-500 ease-in-out transform hover:scale-102"
                         onClick={() => openModal(property)}
                       >
                         <FaEye className="text-xl inline-block" />

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import Home from '../Components/Home';
-import About from '../Components/About';
+import Agent from '../Components/Agents';
 import PropertyDetails from '../Components/Properties/propertyDetails';
 import properties from '../Components/Properties/data';
 
@@ -18,7 +18,7 @@ export default function AllRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Agent />} />
         <Route path="/property/:id" element={<PropertyDetailsWrapper />} />
       </Routes>
     </BrowserRouter>

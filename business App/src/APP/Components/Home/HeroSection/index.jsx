@@ -1,88 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import landingImage1 from "../../../assets/building.jpg";
-import landingImage2 from "../../../assets/building2.jpg";
-import landingImage3 from "../../../assets/estate.jpg";
+import heroImage from  "../../../assets/building.jpg"; 
 
 const HeroSection = () => {
-  const images = [landingImage1, landingImage2, landingImage3];
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(interval); 
-  }, [images.length]);
-
-  const headingVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
-  };
-
-  const subtitleVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut', delay: 0.3 } },
-  };
-
-  const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: 'easeOut', delay: 0.6 } },
-  };
-
   return (
-    <section id="hero" className="relative h-screen">
-      <div className="relative h-screen overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${images[currentImageIndex]})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            width: '100%',
-            height: '100%',
-            clipPath: 'url(#curve-mask)' 
-          }}
-        >
-          <div className="absolute inset-0 bg-blue-800 bg-opacity-70"></div>
+    <section id="hero" className="relative h-screen bg-blue-800 overflow-hidden">
+      <div className="container mx-auto h-full flex flex-col items-center justify-center px-6 text-center relative z-10">
+        <div className="absolute inset-0 z-0 flex justify-center items-center">
+          <img
+            src={heroImage}
+            alt="Hero"
+            className="object-cover object-center h-full w-full opacity-50"
+          />
         </div>
-        <svg width="0" height="0">
-          <defs>
-            <clipPath id="curve-mask" clipPathUnits="objectBoundingBox">
-              <path d="M0,0 L1,0 L1,0.9 Q0.5,1 0,0.9 Z" />
-            </clipPath>
-          </defs>
-        </svg>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-          <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-4 font-heading text-gold-500"
-            initial="hidden"
-            animate="visible"
-            variants={headingVariants}
+
+        <motion.div
+          className="relative z-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <h1 className="text-5xl md:text-6xl font-bold text-gold-500">
+            MODERN <span className="text-white">REAL ESTATE</span>
+          </h1>
+          <p className="text-lg md:text-3xl mb-8 text-gold-300 font-body">
+  Discover a diverse range of properties tailored to meet your needs.
+</p>
+
+          <a
+            href="#contact"
+            className="inline-block bg-gold-500 text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-gold-300 transition-all"
           >
-            Welcome to Your Dream Home
-          </motion.h1>
-          <motion.p
-            className="text-lg md:text-3xl mb-8 text-gold-300 font-body"
-            initial="hidden"
-            animate="visible"
-            variants={subtitleVariants}
-          >
-            Find your perfect property with us today.
-          </motion.p>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={buttonVariants}
-          >
-            <a
-              href="#contact"
-              className="bg-blue-800 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full"
-            >
-              Get Started
+            BOOK NOW
+          </a>
+        </motion.div>
+
+        <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center px-4 py-8">
+          <div className="flex space-x-4">
+            <a href="#" className="text-white hover:text-gold-300">
+              <i className="fab fa-facebook-f"></i>
             </a>
-          </motion.div>
+            <a href="#" className="text-white hover:text-gold-300">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#" className="text-white hover:text-gold-300">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,8 +1,9 @@
 import React from 'react'
 import HeroSection from './HeroSection'
 import Navbar from '../Navbar'
-import About from '../About'
+import Agent from '../Agents'
 import Property from '../Properties'
+import About from '../About'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Navbar/>
       <HeroSection/>
       <Property/>
+      <Agent/>
       <About/>
      </div>
   )

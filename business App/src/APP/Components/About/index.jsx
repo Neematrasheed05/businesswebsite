@@ -1,96 +1,52 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-
-import manager from '../../assets/manager.jpg';
-import developer from '../../assets/developer.jpg';
-import consultant from '../../assets/consultant.jpg';
-import broker from '../../assets/broker.jpg';
-import agent from '../../assets/agent.jpg';
-import marketing from '../../assets/marketing.jpg';
-
-const teamMembers = [
-  {
-    id: 1,
-    name: 'Alex Johnson',
-    role: 'Real Estate Agent',
-    image: agent
-  },
-  {
-    id: 2,
-    name: 'Samantha Smith',
-    role: 'Property Manager',
-    image: manager
-  },
-  {
-    id: 3,
-    name: 'Michael Brown',
-    role: 'Real Estate Developer',
-    image: developer
-  },
-  {
-    id: 4,
-    name: 'Emily Davis',
-    role: 'Real Estate Broker',
-    image: broker
-  },
-  {
-    id: 5,
-    name: 'John Wilson',
-    role: 'Real Estate Consultant',
-    image: consultant
-  },
-  {
-    id: 6,
-    name: 'Olivia Taylor',
-    role: 'Marketing Specialist',
-    image: marketing
-  }
-];
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: 'easeOut' }
-  }
-};
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faFileAlt, faUsers, faBell, faCheck, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import suburban from "../../assets/suburban.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="relative bg-blue-600 py-12">
-      <div className="absolute inset-0 -z-10 bg-blue-800 bg-opacity-30"></div>
-      <section className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center pb-12">
-          <h2 className="text-base font-bold text-gold-300">We have the best team</h2>
-          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white">
-            Meet our amazing team members
-          </h1>
+    <section 
+      id="why-choose-us" 
+      className="relative bg-cover bg-center py-20" 
+      style={{ backgroundImage: `url(${suburban})` }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      
+      <div className="relative container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center text-white mb-12 font-heading">Why Choose Us</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col items-center text-center p-6 bg-black bg-opacity-40 rounded-lg">
+            <FontAwesomeIcon icon={faHome} className="h-16 mb-4 text-gold-500" />
+            <h3 className="text-xl font-semibold mb-4 font-heading text-blue-500">Wide Range of Properties</h3>
+            <p className="text-blue-500 font-body">With a robust selection of popular properties on hand, as well as leading properties from real estate experts.</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 bg-black bg-opacity-40 rounded-lg">
+            <FontAwesomeIcon icon={faFileAlt} className="h-16 mb-4 text-gold-500" />
+            <h3 className="text-xl font-semibold mb-4 font-heading text-blue-500">Financing Made Easy</h3>
+            <p className="text-blue-500 font-body">10 new offers every day. 350 offers on site, trusted by a community of thousands of users.</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 bg-black bg-opacity-40 rounded-lg">
+            <FontAwesomeIcon icon={faUsers} className="h-16 mb-4 text-gold-500" />
+            <h3 className="text-xl font-semibold mb-4 font-heading text-blue-500">Trusted by Thousands</h3>
+            <p className="text-blue-500 font-body">10 new offers every day. 350 offers on site, trusted by a community of thousands of users.</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 bg-black bg-opacity-40 rounded-lg">
+            <FontAwesomeIcon icon={faBell} className="h-16 mb-4 text-gold-500" />
+            <h3 className="text-xl font-semibold mb-4 font-heading text-blue-500">Get Important Notifications</h3>
+            <p className="text-blue-500 font-body">Receive advice, listings, and neighborhood information.</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 bg-black bg-opacity-40 rounded-lg">
+            <FontAwesomeIcon icon={faCheck} className="h-16 mb-4 text-gold-500" />
+            <h3 className="text-xl font-semibold mb-4 font-heading text-blue-500">Transparency</h3>
+            <p className="text-blue-500 font-body">You and your landlord always see the same info, and you will get all important information directly to your inbox.</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-6 bg-black bg-opacity-40 rounded-lg">
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="h-16 mb-4 text-gold-500" />
+            <h3 className="text-xl font-semibold mb-4 font-heading text-blue-500">Near By Me</h3>
+            <p className="text-blue-500 font-body">Search near top-rated schools and explore neighborhoods.</p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {teamMembers.map((member) => (
-            <motion.div
-              key={member.id}
-              className="w-full bg-white rounded-lg p-6 sm:p-8 flex flex-col justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-300"
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              <div className="mb-6">
-                <img
-                  className="object-center object-cover rounded-full h-36 w-36 border-4 border-gold-500"
-                  src={member.image}
-                  alt={member.name}
-                />
-              </div>
-              <div className="text-center">
-                <p className="text-xl text-blue-800 font-bold mb-1">{member.name}</p>
-                <p className="text-base text-gray-500 font-normal">{member.role}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      </div>
     </section>
   );
 };
