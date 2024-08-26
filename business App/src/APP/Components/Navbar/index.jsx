@@ -49,7 +49,6 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        {/* Navigation Links */}
         <ul 
           className={`lg:flex lg:space-x-6 ${isOpen ? 'block' : 'hidden'} absolute lg:relative top-16 left-0 w-full lg:w-auto bg-transparent lg:bg-transparent lg:flex-row flex-col`}
         >
@@ -89,19 +88,7 @@ const Navbar = () => {
               Our Team
             </Link>
           </li>
-          <li>
-            <Link 
-              to="contact" 
-              smooth={true} 
-              duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
-              style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-          </li>
-          <li>
+           <li>
             <Link 
               to="why-choose-us" 
               smooth={true} 
@@ -114,6 +101,19 @@ const Navbar = () => {
             </Link>
         </li>
 
+          <li>
+            <Link 
+              to="partners" 
+              smooth={true} 
+              duration={500} 
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
+              onClick={() => setIsOpen(false)}
+            >
+            Partners
+            </Link>
+          </li>
+         
         </ul>
         
         <div className="hidden lg:block">

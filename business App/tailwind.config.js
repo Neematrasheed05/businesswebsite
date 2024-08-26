@@ -19,7 +19,16 @@ module.exports = {
         heading: ['Playfair Display', 'serif'],
         body: ['Open Sans', 'sans-serif'],
       },
+      animation: {
+        scroll: 'scroll 300s linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
     },
   },
   plugins: [],
-}
+};
