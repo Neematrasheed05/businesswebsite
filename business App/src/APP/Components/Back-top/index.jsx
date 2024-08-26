@@ -28,11 +28,12 @@ const BackToTopButton = () => {
     <div className="fixed bottom-8 right-8 z-50">
       {isVisible && (
         <button
-          onClick={scrollToTop}
-          className="p-3 rounded-full bg-blue-800 text-white shadow-lg hover:bg-blue-600 transition duration-300"
-        >
-          <FaArrowUp />
-        </button>
+        onClick={scrollToTop}
+        className="flex items-center p-3 rounded-full bg-blue-800 text-white shadow-lg hover:bg-blue-600 transition duration-300"
+      >
+        <FaArrowUp className="mr-2" />
+        <span>Back to Top</span>
+      </button>
       )}
     </div>
   );

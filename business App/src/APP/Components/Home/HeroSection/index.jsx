@@ -6,11 +6,12 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative h-screen bg-blue-800 overflow-hidden">
       <div className="container mx-auto h-full flex flex-col items-center justify-center px-6 text-center relative z-10">
-        <div className="absolute inset-0 z-0 flex justify-center items-center">
+        {/* Image with overlay */}
+        <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
             alt="Hero"
-            className="object-cover object-center h-full w-full opacity-50"
+            className="object-cover object-center h-full w-full opacity-70"  // Adjust opacity to allow blue background to show through
           />
         </div>
 
@@ -24,8 +25,8 @@ const HeroSection = () => {
             MODERN <span className="text-white">REAL ESTATE</span>
           </h1>
           <p className="text-lg md:text-3xl mb-8 text-gold-300 font-body">
-  Discover a diverse range of properties tailored to meet your needs.
-</p>
+            Discover a diverse range of properties tailored to meet your needs.
+          </p>
 
           <a
             href="#contact"
