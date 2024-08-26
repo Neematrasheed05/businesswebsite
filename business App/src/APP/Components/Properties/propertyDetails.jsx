@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaBed, FaBath, FaRulerCombined, FaCalendarAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import Footer from '../Footer';
+import Navbar from '../Navbar';
 
 const PropertyDetails = ({ property }) => {
   if (!property) {
@@ -7,6 +9,8 @@ const PropertyDetails = ({ property }) => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="container mx-auto p-6">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-2/3">
@@ -61,6 +65,8 @@ const PropertyDetails = ({ property }) => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
