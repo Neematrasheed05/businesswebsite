@@ -50,7 +50,7 @@ const Navbar = () => {
           </button>
         </div>
         <ul 
-          className={`lg:flex lg:space-x-6 ${isOpen ? 'block' : 'hidden'} absolute lg:relative top-16 left-0 w-full lg:w-auto bg-blue-600 lg:bg-transparent lg:flex-row flex-col lg:space-y-0 space-y-4 lg:space-y-0`}
+          className={`lg:flex lg:space-x-6 ${isOpen ? 'block' : 'hidden'} absolute lg:relative top-20 left-0 w-full lg:w-auto bg-blue-600 lg:bg-transparent lg:flex-row flex-col lg:space-y-0 space-y-4 lg:space-y-0`}
           style={{ zIndex: 1000 }}
         >
           <li>
@@ -58,7 +58,7 @@ const Navbar = () => {
               to="hero" 
               smooth={true} 
               duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-2xl font-semibold hover:shadow-lg"
               onClick={() => setIsOpen(false)}
             >
               Home
@@ -69,7 +69,7 @@ const Navbar = () => {
               to="properties" 
               smooth={true} 
               duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-2xl font-semibold hover:shadow-lg"
               onClick={() => setIsOpen(false)}
             >
               Properties
@@ -80,7 +80,7 @@ const Navbar = () => {
               to="agents" 
               smooth={true} 
               duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-2xl font-semibold hover:shadow-lg"
               onClick={() => setIsOpen(false)}
             >
               Our Team
@@ -91,7 +91,7 @@ const Navbar = () => {
               to="why-choose-us" 
               smooth={true} 
               duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-2xl font-semibold hover:shadow-lg"
               onClick={() => setIsOpen(false)}
             >
               Why Choose Us
@@ -102,7 +102,7 @@ const Navbar = () => {
               to="partners" 
               smooth={true} 
               duration={500} 
-              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-xl font-semibold hover:shadow-lg"
+              className="block px-4 py-2 lg:px-0 lg:py-0 text-white hover:text-gold-300 transition duration-300 font-body cursor-pointer text-2xl font-semibold hover:shadow-lg"
               onClick={() => setIsOpen(false)}
             >
               Partners

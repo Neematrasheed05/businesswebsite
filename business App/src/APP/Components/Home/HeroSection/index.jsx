@@ -6,7 +6,6 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative h-screen bg-blue-800 overflow-hidden">
       <div className="container mx-auto h-full flex flex-col items-center justify-center px-6 text-center relative z-10">
-        {/* Image with overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
